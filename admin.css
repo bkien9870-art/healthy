@@ -1,0 +1,49 @@
+/* ===== Admin Management Console ===== */
+.page { padding-top: 64px; padding-bottom: 80px; }
+.head { margin-bottom: 36px; }
+
+.tabs { display: flex; flex-wrap: wrap; gap: 3px; margin-bottom: 36px; }
+.tab {
+  padding: 20px 36px; background: #e2e8f0; border: none; color: #2d3748;
+  font-size: 16px; font-weight: 600; cursor: pointer; font-family: inherit;
+  transition: background .2s;
+}
+.tab:hover { background: #d3dce7; }
+.tab.active { background: var(--green); color: var(--white); }
+
+.panel { background: var(--white); border: 1px solid var(--border); border-radius: 4px; }
+.panel[hidden] { display: none; }
+
+.toolbar { display: flex; justify-content: space-between; align-items: center; padding: 24px; }
+.filter {
+  width: 450px; max-width: 100%; padding: 14px 16px; border: 1px solid var(--border);
+  border-radius: 4px; font-size: 16px; font-family: inherit; outline: none; background: var(--white);
+}
+.filter:focus { border-color: var(--green); box-shadow: 0 0 0 3px rgba(47, 191, 138, .15); }
+.toolbar .btn { padding: 14px 24px; }
+
+.table-wrap { overflow-x: auto; }
+table { width: 100%; border-collapse: collapse; min-width: 820px; }
+th {
+  background: #f8fafb; text-align: left; padding: 18px 24px; font-size: 14px;
+  text-transform: uppercase; letter-spacing: .4px; color: #4a5568; font-weight: 700;
+  border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);
+}
+td { padding: 20px 24px; border-bottom: 1px solid var(--border); font-size: 18px; }
+tr:last-child td { border-bottom: none; }
+tr[hidden] { display: none; }
+tbody tr:hover { background: #fafcfb; }
+.mono { font-family: "Courier New", monospace; font-size: 14px; color: #4a5568; }
+.name { font-weight: 700; }
+.tag { font-size: 12px; }
+
+.act a { font-size: 18px; text-decoration: underline; }
+.act .edit { color: var(--green); }
+.act .del { color: var(--danger); }
+.act { color: var(--muted); }
+
+@media (max-width: 760px) {
+  .tab { padding: 14px 18px; font-size: 14px; flex: 1 1 45%; }
+  .toolbar { flex-direction: column; align-items: stretch; gap: 14px; }
+  .filter { width: 100%; }
+}

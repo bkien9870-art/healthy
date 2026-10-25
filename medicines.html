@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Medicine Directory - MediCare</title>
+  <link rel="stylesheet" href="base.css">
+  <link rel="stylesheet" href="medicines.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo">Medi <span>Care</span></a>
+      <nav class="main-nav">
+        <a href="medicines.html" class="active">Medicines</a>
+        <a href="diseases.html">Diseases</a>
+        <a href="education.html">Health Education</a>
+        <a href="my-health.html">My Health</a>
+      </nav>
+      <div class="header-actions">
+        <a href="login.html" class="btn btn-outline">Login</a>
+        <a href="register.html" class="btn btn-primary">Join Now</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="container page">
+    <div class="layout">
+      <!-- SIDEBAR -->
+      <aside class="filters">
+        <h4>Classification</h4>
+        <label><input type="radio" name="type" value="all" checked> All Types</label>
+        <label><input type="radio" name="type" value="rx"> Prescription (Rx)</label>
+        <label><input type="radio" name="type" value="otc"> Over-The-Counter (OTC)</label>
+
+        <h4>Drug Form</h4>
+        <label><input type="checkbox" name="form" value="tablet"> Tablet</label>
+        <label><input type="checkbox" name="form" value="capsule"> Capsule</label>
+        <label><input type="checkbox" name="form" value="liquid"> Liquid/Syrup</label>
+        <label><input type="checkbox" name="form" value="topical"> Topical/Cream</label>
+
+        <h4>Symptoms</h4>
+        <label><input type="checkbox" name="symptom" value="pain"> Pain Relief</label>
+        <label><input type="checkbox" name="symptom" value="fever"> Fever</label>
+        <label><input type="checkbox" name="symptom" value="allergy"> Allergy</label>
+      </aside>
+
+      <!-- RESULTS -->
+      <section class="results">
+        <div class="results-head">
+          <div class="section-title"><h1>Medicine Directory</h1></div>
+          <span class="count" id="count">Showing 6 results</span>
+        </div>
+
+        <div class="grid" id="grid">
+          <article class="med" data-type="otc" data-form="tablet" data-symptom="pain fever">
+            <span class="tag tag-green">OTC</span>
+            <h3>Paracetamol 500mg</h3>
+            <p class="active-ing"><b>Active:</b> Acetaminophen</p>
+            <p class="desc">Used for temporary relief of mild to moderate pain and fever.</p>
+            <a href="#" class="link">View details →</a>
+          </article>
+          <article class="med" data-type="rx" data-form="capsule" data-symptom="">
+            <span class="tag tag-red">Rx Required</span>
+            <h3>Amoxicillin 250mg</h3>
+            <p class="active-ing"><b>Active:</b> Amoxicillin Trihydrate</p>
+            <p class="desc">Antibiotic used to treat various bacterial infections.</p>
+            <a href="#" class="link">View details →</a>
+          </article>
+          <article class="med" data-type="otc" data-form="tablet" data-symptom="allergy">
+            <span class="tag tag-green">OTC</span>
+            <h3>Cetirizine 10mg</h3>
+            <p class="active-ing"><b>Active:</b> Cetirizine HCl</p>
+            <p class="desc">Second-generation antihistamine used to treat hay fever and allergies.</p>
+            <a href="#" class="link">View details →</a>
+          </article>
+          <article class="med" data-type="otc" data-form="liquid" data-symptom="pain fever">
+            <span class="tag tag-green">OTC</span>
+            <h3>Ibuprofen Syrup 100mg/5ml</h3>
+            <p class="active-ing"><b>Active:</b> Ibuprofen</p>
+            <p class="desc">Anti-inflammatory used to relieve pain and reduce fever in children.</p>
+            <a href="#" class="link">View details →</a>
+          </article>
+          <article class="med" data-type="rx" data-form="tablet" data-symptom="pain">
+            <span class="tag tag-red">Rx Required</span>
+            <h3>Tramadol 50mg</h3>
+            <p class="active-ing"><b>Active:</b> Tramadol HCl</p>
+            <p class="desc">Opioid analgesic prescribed for moderate to severe pain.</p>
+            <a href="#" class="link">View details →</a>
+          </article>
+          <article class="med" data-type="otc" data-form="topical" data-symptom="pain">
+            <span class="tag tag-green">OTC</span>
+            <h3>Diclofenac Gel 1%</h3>
+            <p class="active-ing"><b>Active:</b> Diclofenac Sodium</p>
+            <p class="desc">Topical gel for local relief of joint and muscle pain.</p>
+            <a href="#" class="link">View details →</a>
+          </article>
+        </div>
+        <p class="empty" id="empty" hidden>Không tìm thấy thuốc phù hợp với bộ lọc.</p>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <a href="index.html" class="logo logo-light">Medi <span>Care</span></a>
+          <p class="footer-about">Dedicated to providing accurate, evidence-based medical information to the public. Our content is reviewed by licensed healthcare professionals.</p>
+        </div>
+        <div>
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="medicines.html">Medicine Directory</a></li>
+            <li><a href="diseases.html">Disease Database</a></li>
+            <li><a href="diseases.html">Symptom Checker</a></li>
+            <li><a href="education.html">Health Blog</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Support</h4>
+          <ul>
+            <li><a href="#">Contact Us</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms of Use</a></li>
+            <li><a href="#">Cookie Policy</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Newsletter</h4>
+          <p class="footer-about">Get the latest health updates directly to your inbox.</p>
+          <form class="newsletter" onsubmit="return false;">
+            <input type="email" placeholder="Email address">
+            <button class="btn btn-primary" type="submit">JOIN</button>
+          </form>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>IMPORTANT: The content on MediCare is for informational and educational purposes only and does not constitute medical advice, diagnosis, or treatment. Always seek the advice of your physician or other qualified health provider with any questions you may have regarding a medical condition. Never disregard professional medical advice or delay in seeking it because of something you have read on this website.</p>
+        <p>© 2023 MediCare Information Portal. All Rights Reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Lọc thuốc theo bộ lọc bên trái
+    var meds = document.querySelectorAll('.med');
+    function checked(name) {
+      return Array.prototype.map.call(document.querySelectorAll('input[name="' + name + '"]:checked'), function (i) { return i.value; });
+    }
+    function apply() {
+      var type = checked('type')[0], forms = checked('form'), syms = checked('symptom'), shown = 0;
+      meds.forEach(function (m) {
+        var ok = (type === 'all' || m.dataset.type === type) &&
+                 (!forms.length || forms.indexOf(m.dataset.form) > -1) &&
+                 (!syms.length || syms.some(function (s) { return m.dataset.symptom.split(' ').indexOf(s) > -1; }));
+        m.hidden = !ok;
+        if (ok) shown++;
+      });
+      document.getElementById('count').textContent = 'Showing ' + shown + ' results';
+      document.getElementById('empty').hidden = shown > 0;
+    }
+    document.querySelectorAll('.filters input').forEach(function (i) { i.addEventListener('change', apply); });
+  </script>
+</body>
+</html>

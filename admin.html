@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Management Console - MediCare</title>
+  <link rel="stylesheet" href="base.css">
+  <link rel="stylesheet" href="admin.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo">Medi <span>Care</span></a>
+      <nav class="main-nav">
+        <a href="medicines.html">Medicines</a>
+        <a href="diseases.html">Diseases</a>
+        <a href="education.html">Health Education</a>
+        <a href="my-health.html">My Health</a>
+      </nav>
+      <div class="header-actions">
+        <a href="login.html" class="btn btn-outline">Login</a>
+        <a href="register.html" class="btn btn-primary">Join Now</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="container page">
+    <div class="section-title head"><h1>Admin Management Console</h1></div>
+
+    <div class="tabs" id="tabs">
+      <button class="tab active" data-panel="medicine">Medicine Database</button>
+      <button class="tab" data-panel="disease">Disease Library</button>
+      <button class="tab" data-panel="feedback">User Feedback</button>
+      <button class="tab" data-panel="blog">Content Blog</button>
+    </div>
+
+    <!-- MEDICINE -->
+    <section class="panel" id="panel-medicine">
+      <div class="toolbar">
+        <input type="text" class="filter" data-table="t-medicine" placeholder="Filter medicines...">
+        <button class="btn btn-primary" type="button">+ Add New Entry</button>
+      </div>
+      <div class="table-wrap">
+        <table id="t-medicine">
+          <thead><tr><th>Drug ID</th><th>Name</th><th>Type</th><th>Manufacturer</th><th>Last Updated</th><th>Status</th><th>Actions</th></tr></thead>
+          <tbody>
+            <tr><td class="mono">MED-8821</td><td class="name">Paracetamol</td><td>OTC</td><td>HealthCorp</td><td>Oct 12, 2023</td><td><span class="tag tag-green">Published</span></td><td class="act"><a href="#" class="edit">Edit</a> | <a href="#" class="del">Delete</a></td></tr>
+            <tr><td class="mono">MED-9032</td><td class="name">Amoxicillin</td><td>Prescription</td><td>BioPharma</td><td>Oct 15, 2023</td><td><span class="tag tag-green">Published</span></td><td class="act"><a href="#" class="edit">Edit</a> | <a href="#" class="del">Delete</a></td></tr>
+            <tr><td class="mono">MED-1102</td><td class="name">Ibuprofen XL</td><td>OTC</td><td>GlobalMed</td><td>Draft</td><td><span class="tag tag-gray">Review</span></td><td class="act"><a href="#" class="edit">Edit</a> | <a href="#" class="del">Delete</a></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- DISEASE -->
+    <section class="panel" id="panel-disease" hidden>
+      <div class="toolbar">
+        <input type="text" class="filter" data-table="t-disease" placeholder="Filter diseases...">
+        <button class="btn btn-primary" type="button">+ Add New Entry</button>
+      </div>
+      <div class="table-wrap">
+        <table id="t-disease">
+          <thead><tr><th>ID</th><th>Name</th><th>Category</th><th>Reviewer</th><th>Last Updated</th><th>Status</th><th>Actions</th></tr></thead>
+          <tbody>
+            <tr><td class="mono">DIS-0101</td><td class="name">Hypertension</td><td>Cardiovascular</td><td>Dr. Tran</td><td>Sep 28, 2023</td><td><span class="tag tag-green">Published</span></td><td class="act"><a href="#" class="edit">Edit</a> | <a href="#" class="del">Delete</a></td></tr>
+            <tr><td class="mono">DIS-0214</td><td class="name">Migraine</td><td>Neurology</td><td>Dr. Pham</td><td>Oct 02, 2023</td><td><span class="tag tag-green">Published</span></td><td class="act"><a href="#" class="edit">Edit</a> | <a href="#" class="del">Delete</a></td></tr>
+            <tr><td class="mono">DIS-0377</td><td class="name">Hypothyroidism</td><td>Endocrinology</td><td>—</td><td>Draft</td><td><span class="tag tag-gray">Review</span></td><td class="act"><a href="#" class="edit">Edit</a> | <a href="#" class="del">Delete</a></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- FEEDBACK -->
+    <section class="panel" id="panel-feedback" hidden>
+      <div class="toolbar">
+        <input type="text" class="filter" data-table="t-feedback" placeholder="Filter feedback...">
+        <button class="btn btn-outline" type="button">Export</button>
+      </div>
+      <div class="table-wrap">
+        <table id="t-feedback">
+          <thead><tr><th>ID</th><th>User</th><th>Subject</th><th>Received</th><th>Status</th><th>Actions</th></tr></thead>
+          <tbody>
+            <tr><td class="mono">FB-301</td><td class="name">an.nguyen@example.com</td><td>Sai thông tin liều dùng</td><td>Oct 16, 2023</td><td><span class="tag tag-red">Open</span></td><td class="act"><a href="#" class="edit">Reply</a> | <a href="#" class="del">Delete</a></td></tr>
+            <tr><td class="mono">FB-302</td><td class="name">binh.le@example.com</td><td>Đề xuất thêm bộ lọc</td><td>Oct 14, 2023</td><td><span class="tag tag-green">Resolved</span></td><td class="act"><a href="#" class="edit">Reply</a> | <a href="#" class="del">Delete</a></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- BLOG -->
+    <section class="panel" id="panel-blog" hidden>
+      <div class="toolbar">
+        <input type="text" class="filter" data-table="t-blog" placeholder="Filter articles...">
+        <button class="btn btn-primary" type="button">+ Add New Entry</button>
+      </div>
+      <div class="table-wrap">
+        <table id="t-blog">
+          <thead><tr><th>ID</th><th>Title</th><th>Category</th><th>Author</th><th>Last Updated</th><th>Status</th><th>Actions</th></tr></thead>
+          <tbody>
+            <tr><td class="mono">BL-045</td><td class="name">Understanding Gut Microbiome</td><td>Nutrition</td><td>Dr. Linh Tran</td><td>Oct 10, 2023</td><td><span class="tag tag-green">Published</span></td><td class="act"><a href="#" class="edit">Edit</a> | <a href="#" class="del">Delete</a></td></tr>
+            <tr><td class="mono">BL-046</td><td class="name">The Science of Circadian Rhythms</td><td>Sleep</td><td>Dr. Minh Vo</td><td>Oct 11, 2023</td><td><span class="tag tag-green">Published</span></td><td class="act"><a href="#" class="edit">Edit</a> | <a href="#" class="del">Delete</a></td></tr>
+            <tr><td class="mono">BL-047</td><td class="name">Vaccines: What to Know</td><td>Prevention</td><td>Dr. Linh Tran</td><td>Draft</td><td><span class="tag tag-gray">Review</span></td><td class="act"><a href="#" class="edit">Edit</a> | <a href="#" class="del">Delete</a></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <a href="index.html" class="logo logo-light">Medi <span>Care</span></a>
+          <p class="footer-about">Dedicated to providing accurate, evidence-based medical information to the public. Our content is reviewed by licensed healthcare professionals.</p>
+        </div>
+        <div>
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="medicines.html">Medicine Directory</a></li>
+            <li><a href="diseases.html">Disease Database</a></li>
+            <li><a href="diseases.html">Symptom Checker</a></li>
+            <li><a href="education.html">Health Blog</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Support</h4>
+          <ul>
+            <li><a href="#">Contact Us</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms of Use</a></li>
+            <li><a href="#">Cookie Policy</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Newsletter</h4>
+          <p class="footer-about">Get the latest health updates directly to your inbox.</p>
+          <form class="newsletter" onsubmit="return false;">
+            <input type="email" placeholder="Email address">
+            <button class="btn btn-primary" type="submit">JOIN</button>
+          </form>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>IMPORTANT: The content on MediCare is for informational and educational purposes only and does not constitute medical advice, diagnosis, or treatment. Always seek the advice of your physician or other qualified health provider with any questions you may have regarding a medical condition. Never disregard professional medical advice or delay in seeking it because of something you have read on this website.</p>
+        <p>© 2023 MediCare Information Portal. All Rights Reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Chuyển tab
+    document.querySelectorAll('.tab').forEach(function (t) {
+      t.addEventListener('click', function () {
+        document.querySelectorAll('.tab').forEach(function (x) { x.classList.remove('active'); });
+        document.querySelectorAll('.panel').forEach(function (p) { p.hidden = true; });
+        t.classList.add('active');
+        document.getElementById('panel-' + t.dataset.panel).hidden = false;
+      });
+    });
+    // Lọc bảng
+    document.querySelectorAll('.filter').forEach(function (f) {
+      f.addEventListener('input', function () {
+        var kw = f.value.trim().toLowerCase();
+        document.querySelectorAll('#' + f.dataset.table + ' tbody tr').forEach(function (r) {
+          r.hidden = kw && r.textContent.toLowerCase().indexOf(kw) === -1;
+        });
+      });
+    });
+    // Xóa hàng (giao diện mẫu)
+    document.querySelectorAll('.del').forEach(function (a) {
+      a.addEventListener('click', function (e) {
+        e.preventDefault();
+        if (confirm('Xóa mục này?')) a.closest('tr').remove();
+      });
+    });
+  </script>
+</body>
+</html>

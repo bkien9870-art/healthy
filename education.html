@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Health Education - MediCare</title>
+  <link rel="stylesheet" href="base.css">
+  <link rel="stylesheet" href="education.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo">Medi <span>Care</span></a>
+      <nav class="main-nav">
+        <a href="medicines.html">Medicines</a>
+        <a href="diseases.html">Diseases</a>
+        <a href="education.html" class="active">Health Education</a>
+        <a href="my-health.html">My Health</a>
+      </nav>
+      <div class="header-actions">
+        <a href="login.html" class="btn btn-outline">Login</a>
+        <a href="register.html" class="btn btn-primary">Join Now</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="container page">
+    <div class="section-title head"><h1>Health Education</h1></div>
+
+    <!-- Bài nổi bật -->
+    <article class="featured">
+      <div class="featured-img"></div>
+      <div class="featured-body">
+        <span class="tag tag-blue">Nutrition</span>
+        <h2>Understanding Gut Microbiome</h2>
+        <p>How your digestive health impacts your immune system and mental well-being. Tìm hiểu hệ vi sinh đường ruột và cách chăm sóc chúng mỗi ngày.</p>
+        <p class="meta">8 min read · Reviewed by Dr. Linh Tran</p>
+        <a href="#" class="btn btn-primary">Read article</a>
+      </div>
+    </article>
+
+    <div class="tabs" id="tabs">
+      <button class="tab active" data-cat="all">All</button>
+      <button class="tab" data-cat="nutrition">Nutrition</button>
+      <button class="tab" data-cat="sleep">Sleep</button>
+      <button class="tab" data-cat="prevention">Prevention</button>
+      <button class="tab" data-cat="mental">Mental Health</button>
+    </div>
+
+    <div class="grid" id="grid">
+      <article class="post" data-cat="sleep">
+        <div class="thumb t-sleep"></div>
+        <div class="post-body">
+          <span class="tag tag-purple">Sleep</span>
+          <h3>The Science of Circadian Rhythms</h3>
+          <p>Optimize your sleep cycle for better cognitive performance and longevity.</p>
+          <a href="#" class="link">Read article →</a>
+        </div>
+      </article>
+      <article class="post" data-cat="prevention">
+        <div class="thumb t-fit"></div>
+        <div class="post-body">
+          <span class="tag tag-red">Prevention</span>
+          <h3>Managing Hypertension Early</h3>
+          <p>Practical lifestyle changes to control blood pressure without immediate medication.</p>
+          <a href="#" class="link">Read article →</a>
+        </div>
+      </article>
+      <article class="post" data-cat="nutrition">
+        <div class="thumb t-food"></div>
+        <div class="post-body">
+          <span class="tag tag-blue">Nutrition</span>
+          <h3>Building a Balanced Plate</h3>
+          <p>Simple rules for portion sizes, protein, fibre and healthy fats.</p>
+          <a href="#" class="link">Read article →</a>
+        </div>
+      </article>
+      <article class="post" data-cat="mental">
+        <div class="thumb t-mind"></div>
+        <div class="post-body">
+          <span class="tag tag-gray">Mental Health</span>
+          <h3>Stress: Recognising the Signs</h3>
+          <p>How chronic stress affects the body and what you can do about it.</p>
+          <a href="#" class="link">Read article →</a>
+        </div>
+      </article>
+      <article class="post" data-cat="prevention">
+        <div class="thumb t-fit"></div>
+        <div class="post-body">
+          <span class="tag tag-red">Prevention</span>
+          <h3>Vaccines: What to Know</h3>
+          <p>An overview of recommended adult vaccinations and schedules.</p>
+          <a href="#" class="link">Read article →</a>
+        </div>
+      </article>
+      <article class="post" data-cat="sleep">
+        <div class="thumb t-sleep"></div>
+        <div class="post-body">
+          <span class="tag tag-purple">Sleep</span>
+          <h3>Sleep Hygiene Checklist</h3>
+          <p>Eight evidence-based habits for falling asleep faster.</p>
+          <a href="#" class="link">Read article →</a>
+        </div>
+      </article>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <a href="index.html" class="logo logo-light">Medi <span>Care</span></a>
+          <p class="footer-about">Dedicated to providing accurate, evidence-based medical information to the public. Our content is reviewed by licensed healthcare professionals.</p>
+        </div>
+        <div>
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="medicines.html">Medicine Directory</a></li>
+            <li><a href="diseases.html">Disease Database</a></li>
+            <li><a href="diseases.html">Symptom Checker</a></li>
+            <li><a href="education.html">Health Blog</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Support</h4>
+          <ul>
+            <li><a href="#">Contact Us</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms of Use</a></li>
+            <li><a href="#">Cookie Policy</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Newsletter</h4>
+          <p class="footer-about">Get the latest health updates directly to your inbox.</p>
+          <form class="newsletter" onsubmit="return false;">
+            <input type="email" placeholder="Email address">
+            <button class="btn btn-primary" type="submit">JOIN</button>
+          </form>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>IMPORTANT: The content on MediCare is for informational and educational purposes only and does not constitute medical advice, diagnosis, or treatment. Always seek the advice of your physician or other qualified health provider with any questions you may have regarding a medical condition. Never disregard professional medical advice or delay in seeking it because of something you have read on this website.</p>
+        <p>© 2023 MediCare Information Portal. All Rights Reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.querySelectorAll('.tab').forEach(function (t) {
+      t.addEventListener('click', function () {
+        document.querySelectorAll('.tab').forEach(function (x) { x.classList.remove('active'); });
+        t.classList.add('active');
+        document.querySelectorAll('.post').forEach(function (p) {
+          p.hidden = !(t.dataset.cat === 'all' || p.dataset.cat === t.dataset.cat);
+        });
+      });
+    });
+  </script>
+</body>
+</html>

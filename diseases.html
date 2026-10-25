@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Disease Database - MediCare</title>
+  <link rel="stylesheet" href="base.css">
+  <link rel="stylesheet" href="diseases.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo">Medi <span>Care</span></a>
+      <nav class="main-nav">
+        <a href="medicines.html">Medicines</a>
+        <a href="diseases.html" class="active">Diseases</a>
+        <a href="education.html">Health Education</a>
+        <a href="my-health.html">My Health</a>
+      </nav>
+      <div class="header-actions">
+        <a href="login.html" class="btn btn-outline">Login</a>
+        <a href="register.html" class="btn btn-primary">Join Now</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="banner">
+      <div class="container">
+        <h1>Disease &amp; Symptom Database</h1>
+        <p>Tìm hiểu triệu chứng, nguyên nhân và hướng điều trị của các bệnh thường gặp.</p>
+        <div class="search-box">
+          <input type="text" id="q" placeholder="Search by disease name or symptom...">
+          <button class="btn btn-primary" type="button">Search</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="container page">
+      <div class="chips" id="chips">
+        <button class="chip active" data-cat="all">All</button>
+        <button class="chip" data-cat="cardio">Cardiovascular</button>
+        <button class="chip" data-cat="neuro">Neurology</button>
+        <button class="chip" data-cat="ortho">Orthopedics</button>
+        <button class="chip" data-cat="endo">Endocrinology</button>
+      </div>
+
+      <div class="section-title head"><h2>Common Conditions</h2></div>
+
+      <div class="grid" id="grid">
+        <article class="disease" data-cat="cardio">
+          <span class="tag tag-red">Cardiovascular</span>
+          <h3>Hypertension</h3>
+          <p class="sym"><b>Symptoms:</b> Headache, dizziness, shortness of breath</p>
+          <p class="desc">Persistently high blood pressure that increases the risk of heart disease and stroke.</p>
+          <a href="#" class="link">Learn more →</a>
+        </article>
+        <article class="disease" data-cat="endo">
+          <span class="tag tag-green">Endocrinology</span>
+          <h3>Type 2 Diabetes</h3>
+          <p class="sym"><b>Symptoms:</b> Increased thirst, frequent urination, fatigue</p>
+          <p class="desc">A chronic condition affecting how the body processes blood sugar (glucose).</p>
+          <a href="#" class="link">Learn more →</a>
+        </article>
+        <article class="disease" data-cat="neuro">
+          <span class="tag tag-purple">Neurology</span>
+          <h3>Migraine</h3>
+          <p class="sym"><b>Symptoms:</b> Throbbing headache, nausea, light sensitivity</p>
+          <p class="desc">Recurring headaches, often on one side of the head, sometimes with aura.</p>
+          <a href="#" class="link">Learn more →</a>
+        </article>
+        <article class="disease" data-cat="ortho">
+          <span class="tag tag-blue">Orthopedics</span>
+          <h3>Osteoarthritis</h3>
+          <p class="sym"><b>Symptoms:</b> Joint pain, stiffness, reduced flexibility</p>
+          <p class="desc">Degeneration of joint cartilage, most common in the knees, hips and hands.</p>
+          <a href="#" class="link">Learn more →</a>
+        </article>
+        <article class="disease" data-cat="cardio">
+          <span class="tag tag-red">Cardiovascular</span>
+          <h3>Coronary Artery Disease</h3>
+          <p class="sym"><b>Symptoms:</b> Chest pain, fatigue, shortness of breath</p>
+          <p class="desc">Narrowing of the arteries that supply blood to the heart muscle.</p>
+          <a href="#" class="link">Learn more →</a>
+        </article>
+        <article class="disease" data-cat="endo">
+          <span class="tag tag-green">Endocrinology</span>
+          <h3>Hypothyroidism</h3>
+          <p class="sym"><b>Symptoms:</b> Weight gain, cold intolerance, tiredness</p>
+          <p class="desc">An underactive thyroid that does not produce enough thyroid hormone.</p>
+          <a href="#" class="link">Learn more →</a>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <a href="index.html" class="logo logo-light">Medi <span>Care</span></a>
+          <p class="footer-about">Dedicated to providing accurate, evidence-based medical information to the public. Our content is reviewed by licensed healthcare professionals.</p>
+        </div>
+        <div>
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="medicines.html">Medicine Directory</a></li>
+            <li><a href="diseases.html">Disease Database</a></li>
+            <li><a href="diseases.html">Symptom Checker</a></li>
+            <li><a href="education.html">Health Blog</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Support</h4>
+          <ul>
+            <li><a href="#">Contact Us</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms of Use</a></li>
+            <li><a href="#">Cookie Policy</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Newsletter</h4>
+          <p class="footer-about">Get the latest health updates directly to your inbox.</p>
+          <form class="newsletter" onsubmit="return false;">
+            <input type="email" placeholder="Email address">
+            <button class="btn btn-primary" type="submit">JOIN</button>
+          </form>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>IMPORTANT: The content on MediCare is for informational and educational purposes only and does not constitute medical advice, diagnosis, or treatment. Always seek the advice of your physician or other qualified health provider with any questions you may have regarding a medical condition. Never disregard professional medical advice or delay in seeking it because of something you have read on this website.</p>
+        <p>© 2023 MediCare Information Portal. All Rights Reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Lọc theo nhóm bệnh + tìm kiếm
+    var cat = 'all';
+    var items = document.querySelectorAll('.disease');
+    var q = document.getElementById('q');
+    function apply() {
+      var kw = q.value.trim().toLowerCase();
+      items.forEach(function (d) {
+        var okCat = cat === 'all' || d.dataset.cat === cat;
+        var okKw = !kw || d.textContent.toLowerCase().indexOf(kw) > -1;
+        d.hidden = !(okCat && okKw);
+      });
+    }
+    document.querySelectorAll('.chip').forEach(function (c) {
+      c.addEventListener('click', function () {
+        document.querySelectorAll('.chip').forEach(function (x) { x.classList.remove('active'); });
+        c.classList.add('active'); cat = c.dataset.cat; apply();
+      });
+    });
+    q.addEventListener('input', apply);
+  </script>
+</body>
+</html>

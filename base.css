@@ -1,0 +1,115 @@
+/* ===== MediCare - Style dùng chung (header, footer, nút) ===== */
+:root {
+  --green: #2fbf8a;
+  --green-dark: #25a577;
+  --navy: #1a202c;
+  --text: #1a202c;
+  --muted: #5f6b7a;
+  --border: #e2e8ec;
+  --bg: #f4f6f5;
+  --white: #ffffff;
+  --danger: #e53e3e;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: "Inter", "Segoe UI", Roboto, Arial, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.5;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+main { flex: 1; }
+
+a { text-decoration: none; color: inherit; }
+ul { list-style: none; }
+
+.container { width: 100%; max-width: 1160px; margin: 0 auto; padding: 0 24px; }
+
+/* Buttons */
+.btn {
+  display: inline-block; padding: 12px 24px; border-radius: 4px;
+  font-weight: 700; font-size: 14px; text-transform: uppercase;
+  cursor: pointer; border: 2px solid transparent; font-family: inherit;
+  transition: all .2s ease; text-align: center;
+}
+.btn-primary { background: var(--green); color: var(--white); }
+.btn-primary:hover { background: var(--green-dark); }
+.btn-outline { background: var(--white); color: var(--green); border-color: var(--green); }
+.btn-outline:hover { background: var(--green); color: var(--white); }
+.btn-block { display: block; width: 100%; }
+
+/* Header */
+.site-header { background: var(--white); border-bottom: 1px solid var(--border); }
+.header-inner { display: flex; align-items: center; justify-content: space-between; height: 108px; }
+.logo {
+  font-size: 34px; font-weight: 900; color: var(--navy);
+  text-decoration: underline; text-decoration-thickness: 2px; text-underline-offset: 3px;
+  letter-spacing: -.5px;
+}
+.logo span { color: var(--green); }
+.logo-light { color: var(--white); text-decoration: none; display: inline-block; }
+
+.main-nav { display: flex; gap: 48px; }
+.main-nav a {
+  font-size: 16px; font-weight: 500; text-transform: uppercase; letter-spacing: .5px;
+  color: var(--navy); transition: color .2s;
+}
+.main-nav a:hover, .main-nav a.active { color: var(--green); }
+
+.header-actions { display: flex; gap: 24px; }
+.header-actions .btn { padding: 14px 36px; }
+
+/* Section title (vạch xanh bên trái) */
+.section-title { border-left: 5px solid var(--green); padding-left: 20px; }
+.section-title h1, .section-title h2 { font-size: 30px; font-weight: 800; }
+
+.link { color: var(--green); font-weight: 700; font-size: 14px; text-transform: uppercase; letter-spacing: .3px; }
+.link:hover { text-decoration: underline; }
+
+/* Tag */
+.tag {
+  display: inline-block; padding: 4px 12px; border-radius: 20px;
+  font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: .3px;
+}
+.tag-green { background: #e6f8f1; color: var(--green-dark); }
+.tag-red { background: #fdecec; color: var(--danger); }
+.tag-blue { background: #e8f0fe; color: #2b6cb0; }
+.tag-purple { background: #f1e8fe; color: #6b46c1; }
+.tag-gray { background: #edf2f7; color: #4a5568; }
+
+/* Footer */
+.site-footer { background: var(--navy); color: #cbd5e0; padding: 80px 0 40px; }
+.footer-grid {
+  display: grid; grid-template-columns: 1.8fr 1fr 1fr 1.4fr; gap: 40px;
+  padding-bottom: 56px; border-bottom: 1px solid #2d3748;
+}
+.site-footer h4 { color: var(--white); font-size: 20px; margin-bottom: 24px; }
+.site-footer li { margin-bottom: 14px; }
+.site-footer li a:hover { color: var(--green); }
+.footer-about { margin-top: 20px; font-size: 16px; color: #a0aec0; }
+.footer-grid h4 + .footer-about { margin-top: 0; font-size: 15px; }
+.newsletter { display: flex; margin-top: 24px; }
+.newsletter input {
+  flex: 1; min-width: 0; padding: 14px 16px; border: none;
+  border-radius: 4px 0 0 4px; font-size: 16px; font-family: inherit; outline: none;
+}
+.newsletter .btn { border-radius: 0 4px 4px 0; padding: 14px 16px; }
+.footer-bottom { padding-top: 32px; text-align: center; font-size: 14px; color: #718096; }
+.footer-bottom p + p { margin-top: 24px; }
+
+/* Responsive */
+@media (max-width: 960px) {
+  .main-nav { display: none; }
+  .header-inner { height: 80px; }
+  .header-actions .btn { padding: 10px 20px; }
+  .footer-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 520px) {
+  .footer-grid { grid-template-columns: 1fr; }
+  .header-actions { gap: 8px; }
+  .logo { font-size: 26px; }
+}

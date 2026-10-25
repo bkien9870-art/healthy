@@ -1,0 +1,48 @@
+/* ===== Health Education ===== */
+.page { padding-top: 48px; padding-bottom: 80px; }
+.head { margin-bottom: 36px; }
+
+.featured {
+  display: grid; grid-template-columns: 1.1fr 1fr; background: var(--white);
+  border: 1px solid var(--border); border-radius: 4px; overflow: hidden; margin-bottom: 44px;
+}
+.featured-img { min-height: 340px; background: linear-gradient(135deg, #d7f3e8 0%, #9adcc0 50%, #2fbf8a 100%); }
+.featured-body { padding: 44px 48px; display: flex; flex-direction: column; align-items: flex-start; justify-content: center; }
+.featured-body h2 { font-size: 30px; font-weight: 800; margin: 16px 0 14px; }
+.featured-body p { color: var(--muted); font-size: 17px; margin-bottom: 14px; }
+.featured-body .meta { font-size: 14px; margin-bottom: 24px; }
+
+.tabs { display: flex; flex-wrap: wrap; gap: 8px; border-bottom: 1px solid var(--border); margin-bottom: 36px; }
+.tab {
+  padding: 12px 22px; background: none; border: none; border-bottom: 3px solid transparent;
+  font-size: 15px; font-weight: 700; text-transform: uppercase; letter-spacing: .4px;
+  color: var(--muted); cursor: pointer; font-family: inherit; margin-bottom: -1px;
+}
+.tab:hover { color: var(--green); }
+.tab.active { color: var(--green); border-bottom-color: var(--green); }
+
+.grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; }
+.post {
+  background: var(--white); border: 1px solid var(--border); border-radius: 4px;
+  overflow: hidden; transition: all .2s;
+}
+.post:hover { transform: translateY(-4px); box-shadow: 0 12px 28px rgba(26, 32, 44, .08); }
+.post[hidden] { display: none; }
+.thumb { height: 180px; }
+.t-sleep { background: linear-gradient(180deg, #5a5878 0%, #b97c8a 60%, #f0a98f 100%); }
+.t-fit { background: linear-gradient(135deg, #f7f7f7 0%, #fbd9c3 60%, #f26b3a 100%); }
+.t-food { background: linear-gradient(135deg, #e6f8d9 0%, #a9dc7f 100%); }
+.t-mind { background: linear-gradient(135deg, #dfe7fb 0%, #9aaee8 100%); }
+.post-body { padding: 26px 30px 30px; }
+.post-body h3 { font-size: 21px; font-weight: 800; margin: 14px 0 10px; }
+.post-body p { color: var(--muted); margin-bottom: 18px; }
+
+@media (max-width: 960px) {
+  .featured { grid-template-columns: 1fr; }
+  .featured-img { min-height: 220px; }
+  .grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 640px) {
+  .grid { grid-template-columns: 1fr; }
+  .featured-body { padding: 28px 24px; }
+}

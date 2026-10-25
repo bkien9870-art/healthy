@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Đăng ký - MediCare</title>
+  <link rel="stylesheet" href="register.css">
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo">Medi <span>Care</span></a>
+      <nav class="main-nav">
+        <a href="medicines.html">Medicines</a>
+        <a href="diseases.html">Diseases</a>
+        <a href="education.html">Health Education</a>
+        <a href="my-health.html">My Health</a>
+      </nav>
+      <div class="header-actions">
+        <a href="login.html" class="btn btn-outline">Login</a>
+        <a href="register.html" class="btn btn-primary">Join Now</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- MAIN -->
+  <main class="auth-page">
+    <div class="container">
+      <div class="auth-card">
+
+        <!-- Left panel -->
+        <aside class="auth-side">
+          <h2>Tham gia MediCare</h2>
+          <p>Tạo tài khoản miễn phí để cá nhân hóa trải nghiệm chăm sóc sức khỏe của bạn.</p>
+          <ul class="side-list">
+            <li>Tra cứu thuốc &amp; bệnh nhanh chóng</li>
+            <li>Theo dõi hồ sơ sức khỏe cá nhân</li>
+            <li>Nhận bản tin sức khỏe mỗi tuần</li>
+            <li>Thông tin được chuyên gia y tế thẩm định</li>
+          </ul>
+        </aside>
+
+        <!-- Form -->
+        <section class="auth-form-wrap">
+          <div class="section-title">
+            <h1>Tạo tài khoản</h1>
+          </div>
+          <p class="sub">Điền thông tin bên dưới để bắt đầu.</p>
+
+          <form id="registerForm" class="auth-form" novalidate>
+            <div class="form-grid">
+              <div class="form-group">
+                <label for="fullname">Họ và tên</label>
+                <input type="text" id="fullname" name="fullname" placeholder="Nguyễn Văn A" required>
+              </div>
+
+              <div class="form-group">
+                <label for="phone">Số điện thoại</label>
+                <input type="tel" id="phone" name="phone" placeholder="0901 234 567">
+              </div>
+
+              <div class="form-group full">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="ten@example.com" required>
+              </div>
+
+              <div class="form-group">
+                <label for="dob">Ngày sinh</label>
+                <input type="date" id="dob" name="dob">
+              </div>
+
+              <div class="form-group">
+                <label for="gender">Giới tính</label>
+                <select id="gender" name="gender">
+                  <option value="">Chọn giới tính</option>
+                  <option value="male">Nam</option>
+                  <option value="female">Nữ</option>
+                  <option value="other">Khác</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="password">Mật khẩu</label>
+                <div class="pw-field">
+                  <input type="password" id="password" name="password" placeholder="Tối thiểu 8 ký tự" required>
+                  <button type="button" class="pw-toggle" data-target="password">HIỆN</button>
+                </div>
+                <div class="strength" aria-hidden="true">
+                  <span></span><span></span><span></span><span></span>
+                </div>
+                <small id="strengthText" class="hint">Dùng chữ hoa, số và ký tự đặc biệt.</small>
+              </div>
+
+              <div class="form-group">
+                <label for="confirm">Xác nhận mật khẩu</label>
+                <div class="pw-field">
+                  <input type="password" id="confirm" name="confirm" placeholder="Nhập lại mật khẩu" required>
+                  <button type="button" class="pw-toggle" data-target="confirm">HIỆN</button>
+                </div>
+              </div>
+            </div>
+
+            <label class="checkbox terms">
+              <input type="checkbox" name="terms" id="terms">
+              <span>Tôi đồng ý với <a href="#" class="link">Điều khoản sử dụng</a> và <a href="#" class="link">Chính sách bảo mật</a>.</span>
+            </label>
+
+            <label class="checkbox">
+              <input type="checkbox" name="newsletter" checked>
+              <span>Nhận bản tin sức khỏe qua email.</span>
+            </label>
+
+            <p class="form-error" id="formError" hidden></p>
+
+            <button type="submit" class="btn btn-primary btn-block">ĐĂNG KÝ</button>
+
+            <p class="switch">Đã có tài khoản? <a href="login.html" class="link">Đăng nhập</a></p>
+          </form>
+        </section>
+
+      </div>
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <a href="index.html" class="logo logo-light">Medi <span>Care</span></a>
+          <p class="footer-about">Dedicated to providing accurate, evidence-based medical information to the public. Our content is reviewed by licensed healthcare professionals.</p>
+        </div>
+        <div>
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="medicines.html">Medicine Directory</a></li>
+            <li><a href="diseases.html">Disease Database</a></li>
+            <li><a href="#">Symptom Checker</a></li>
+            <li><a href="education.html">Health Blog</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Support</h4>
+          <ul>
+            <li><a href="#">Contact Us</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms of Use</a></li>
+            <li><a href="#">Cookie Policy</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Newsletter</h4>
+          <p class="footer-about">Get the latest health updates directly to your inbox.</p>
+          <form class="newsletter" onsubmit="return false;">
+            <input type="email" placeholder="Email address">
+            <button class="btn btn-primary" type="submit">JOIN</button>
+          </form>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>IMPORTANT: The content on MediCare is for informational and educational purposes only and does not constitute medical advice, diagnosis, or treatment. Always seek the advice of your physician or other qualified health provider with any questions you may have regarding a medical condition. Never disregard professional medical advice or delay in seeking it because of something you have read on this website.</p>
+        <p>© 2023 MediCare Information Portal. All Rights Reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Hiện / ẩn mật khẩu
+    document.querySelectorAll('.pw-toggle').forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        var input = document.getElementById(btn.dataset.target);
+        var show = input.type === 'password';
+        input.type = show ? 'text' : 'password';
+        btn.textContent = show ? 'ẨN' : 'HIỆN';
+      });
+    });
+
+    // Thanh độ mạnh mật khẩu
+    var pw = document.getElementById('password');
+    var bars = document.querySelectorAll('.strength span');
+    var txt = document.getElementById('strengthText');
+    var labels = ['Rất yếu', 'Yếu', 'Khá', 'Mạnh'];
+    pw.addEventListener('input', function () {
+      var v = pw.value, score = 0;
+      if (v.length >= 8) score++;
+      if (/[A-Z]/.test(v) && /[a-z]/.test(v)) score++;
+      if (/\d/.test(v)) score++;
+      if (/[^A-Za-z0-9]/.test(v)) score++;
+      bars.forEach(function (b, i) {
+        b.className = i < score ? 'on s' + score : '';
+      });
+      txt.textContent = v ? 'Độ mạnh: ' + labels[Math.max(score - 1, 0)] : 'Dùng chữ hoa, số và ký tự đặc biệt.';
+    });
+
+    // Kiểm tra form cơ bản (giao diện mẫu)
+    document.getElementById('registerForm').addEventListener('submit', function (e) {
+      e.preventDefault();
+      var err = document.getElementById('formError');
+      function fail(msg) { err.textContent = msg; err.hidden = false; }
+      if (!this.fullname.value.trim()) return fail('Vui lòng nhập họ và tên.');
+      if (!/^\S+@\S+\.\S+$/.test(this.email.value.trim())) return fail('Vui lòng nhập email hợp lệ.');
+      if (this.password.value.length < 8) return fail('Mật khẩu phải có ít nhất 8 ký tự.');
+      if (this.password.value !== this.confirm.value) return fail('Mật khẩu xác nhận không khớp.');
+      if (!this.terms.checked) return fail('Bạn cần đồng ý với điều khoản sử dụng.');
+      err.hidden = true;
+      alert('Giao diện mẫu: đăng ký hợp lệ (chưa kết nối backend).');
+    });
+  </script>
+</body>
+</html>

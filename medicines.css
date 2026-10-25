@@ -1,0 +1,46 @@
+/* ===== Medicine Directory ===== */
+.page { padding-top: 48px; padding-bottom: 80px; }
+.layout { display: grid; grid-template-columns: 390px 1fr; gap: 48px; align-items: start; }
+
+.filters {
+  background: var(--white); border: 1px solid var(--border); border-radius: 4px;
+  padding: 30px 30px 36px;
+}
+.filters h4 {
+  font-size: 15px; text-transform: uppercase; letter-spacing: 1.5px;
+  color: #4a5568; margin: 0 0 18px;
+}
+.filters h4:not(:first-child) { margin-top: 34px; }
+.filters label {
+  display: flex; align-items: center; gap: 12px; margin-bottom: 14px;
+  font-size: 17px; cursor: pointer; color: #2d3748;
+}
+.filters input { width: 18px; height: 18px; accent-color: var(--green); }
+
+.results-head { display: flex; justify-content: space-between; align-items: center; margin-bottom: 36px; }
+.results-head .section-title h1 { font-size: 30px; }
+.count { color: var(--muted); font-size: 15px; }
+
+.grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 36px 36px; }
+.med {
+  background: var(--white); border: 1px solid var(--border); border-radius: 4px;
+  padding: 34px 36px; transition: all .2s;
+}
+.med:hover { border-color: var(--green); box-shadow: 0 10px 24px rgba(26, 32, 44, .07); }
+.med[hidden] { display: none; }
+.med h3 { font-size: 22px; font-weight: 800; margin: 14px 0 14px; }
+.active-ing { color: var(--muted); margin-bottom: 18px; }
+.active-ing b { color: var(--text); }
+.desc { color: var(--muted); margin-bottom: 22px; font-size: 17px; }
+
+.empty { text-align: center; color: var(--muted); padding: 40px 0; }
+
+@media (max-width: 1100px) {
+  .layout { grid-template-columns: 260px 1fr; gap: 28px; }
+  .grid { grid-template-columns: 1fr 1fr; gap: 24px; }
+}
+@media (max-width: 760px) {
+  .layout { grid-template-columns: 1fr; }
+  .grid { grid-template-columns: 1fr; }
+  .results-head { flex-direction: column; align-items: flex-start; gap: 10px; }
+}
